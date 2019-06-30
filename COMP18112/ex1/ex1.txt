@@ -1,0 +1,213 @@
+// When 'HELLO' will be typed, there will appear an error message, which is an
+// actual html page 
+
+HELLO
+<head>
+<title>Error response</title>
+</head>
+<body>
+<h1>Error response</h1>
+<p>Error code 400.
+<p>Message: Bad request syntax ('HELLO').
+<p>Error code explanation: 400 = Bad request syntax or unsupported method.
+</body>
+Connection closed by foreign host.
+
+// When I entered the correct commmand, the telnet program started.
+
+^]
+
+telnet> help
+Commands may be abbreviated.  Commands are:
+
+close   	close current connection
+logout  	forcibly logout remote user and close the connection
+display 	display operating parameters
+mode    	try to enter line or character mode ('mode ?' for more)
+open    	connect to a site
+quit    	exit telnet
+send    	transmit special characters ('send ?' for more)
+set     	set operating parameters ('set ?' for more)
+unset   	unset operating parameters ('unset ?' for more)
+status  	print status information
+toggle  	toggle operating parameters ('toggle ?' for more)
+slc     	change state of special charaters ('slc ?' for more)
+z       	suspend telnet
+!       	invoke a subshell
+environ 	change environment variables ('environ ?' for more)
+?       	print help information
+telnet> quit
+Connection closed.
+
+// In the moment when I typed 'GET /', the output was the code of my web page
+// that was opened in the local host. 
+
+GET /
+
+<!DOCTYPE html> 
+<!--DOCTYPE is not a html tag, it is an instruction to the web browser about 
+what version of html the page is written in-->
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <title>first computer invented</title>
+  </head>
+  
+  <body>
+  <h1>When was the first computer invented?</h1>
+  <div>
+  <p class= "firstOne">
+     "There is no easy answer to this question due to the many different 
+classifications of computers. The first mechanical computer, created by 
+Charles Babbage in 1822, doesn't really resemble what most would consider 
+a computer today. Therefore, this document has been created with a listing 
+of each of the computer firsts, starting with the Difference Engine and 
+leading up to the computers we use today." </br> 
+     </p>
+     
+     <img class = "firstpc" src="./firstpc.jpg">
+ </div></br>
+ <div>
+    <p class= "secondOne"></br>
+     "The word "computer" was first recorded as being used in 1613 and 
+originally was used to describe a human who performed calculations or 
+computations. The definition of a computer remained the same until the 
+end of the 19th century, when the industrial revolution gave rise to machines 
+whose primary purpose was calculating." (source: Computer Hope)
+     </p></br>
+     
+     
+<!--the next code is from youtube-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d1pvc9Zh7Tg"
+ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+ picture-in-picture" allowfullscreen>
+</iframe></div>
+
+<button onclick="location.href='second.html' ">Next page - Implementation page
+</button>
+
+  </body>
+</html>
+
+Connection closed by foreign host.
+
+// After the following command the telnet program outputs the code of 
+// the index.html page 
+
+GET /index.html      
+
+<!DOCTYPE html> 
+<!--DOCTYPE is not a html tag, it is an instruction to the web browser about 
+what version of html the page is written in-->
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <title>first computer invented</title>
+  </head>
+  
+  <body>
+  <h1>When was the first computer invented?</h1>
+  <div>
+  <p class= "firstOne">
+     "There is no easy answer to this question due to the many different 
+classifications of computers. The first mechanical computer, created by 
+Charles Babbage in 1822, doesn't really resemble what most would consider 
+a computer today. Therefore, this document has been created with a listing 
+of each of the computer firsts, starting with the Difference Engine and 
+leading up to the computers we use today." </br> 
+     </p>
+     
+     <img class = "firstpc" src="./firstpc.jpg">
+ </div></br>
+ <div>
+    <p class= "secondOne"></br>
+     "The word "computer" was first recorded as being used in 1613 and 
+originally was used to describe a human who performed calculations or 
+computations. The definition of a computer remained the same until the end of 
+the 19th century, when the industrial revolution gave rise to machines whose
+ primary purpose was calculating." (source: Computer Hope)
+     </p></br>
+     
+     
+<!--the next code is from youtube-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d1pvc9Zh7Tg"
+ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+ picture-in-picture" allowfullscreen>
+</iframe></div>
+
+<button onclick="location.href='second.html' ">Next page - Implementation page
+</button>
+
+  </body>
+</html>
+
+Connection closed by foreign host.
+
+// After the following command the telnet program outputs the code of 
+// the second.html page 
+
+GET /second.htnl
+
+<head>
+<title>Error response</title>
+</head>
+<body>
+<h1>Error response</h1>
+<p>Error code 404.
+<p>Message: File not found.
+<p>Error code explanation: 404 = Nothing matches the given URI.
+</body>
+Connection closed by foreign host.
+[j47510pc@e-c07kilf3110 ex5]$ telnet localhost 8000
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+GET /second.html
+
+<!DOCTYPE html> 
+<html>
+  <head>
+<link rel="stylesheet" type="text/css" href="second.css" />
+    <title>Just some more information</title>
+  </head>
+
+  <body>
+  <h1>Just some more information about implementation</h1>
+<div>
+<p>Paul-Andrei CODREA</p>
+<ul>
+  <li>Programming Languages: HTML5 and CSS3</li>
+  <li>Editor: Gedit</li>
+  <li>Operating System: Debian</li>
+  <li>Browser: Chromium</li>
+<li>Validator: <a href="https://validator.w3.org/">W3C</a></li>
+<li>Refrences: <a href = "https://en.wikipedia.org/wiki/Cascading_Style_Sheets">
+Wikipedia</a>, <a href="https://www.w3schools.com/html/default.asp">W3schools
+</a></li>
+</ul>
+</div>
+<button onclick="location.href='index.html' ">Back to "first computer"</button>
+</br>
+  </body>
+</html>
+
+Connection closed by foreign host.
+
+/* 
+
+error HTTP 301 (wikipedia.org/wiki/HTTP_301)
+The HTTP response status code 301 Moved Permanently is used for permanent URL 
+redirection, meaning current links or records using the URL that the response 
+is received for should be updated. 
+
+GET /
+there is no explicit file mentioned. What has the server done here?
+
+python -m SimpleHTTPServer
+which will start up the same simple HTTP server that we used in the 
+introductory labs
+
+*/
+

@@ -1,0 +1,21 @@
+This file is created with the purpose of proving that I have finished task2.1 
+and task2.2.
+
+http://webdev.cs.manchester.ac.uk/~j47510pc/IMServer.php
+
+print: COMP18112 IM Server
+
+http://webdev.cs.manchester.ac.uk/~j47510pc/IMServer.php?action=set&key=test1&value=hello
+
+print: a:1:{s:5:"test1";s:5:"hello";}
+
+http://webdev.cs.manchester.ac.uk/~j47510pc/IMServer.php?action=get&key=test1
+
+print in a new page: hello
+
+>>> import im
+>>> server= im.IMServerProxy(’http://webdev.cs.manchester.ac.uk/˜username/IMServer.php’)
+>>> print server['test1']
+
+
+the output: hello
